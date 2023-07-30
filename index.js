@@ -29,7 +29,7 @@ let text;
 let perPage;
 let sort;
 
-app.get('/', async (req, res) => {
+app.get('/api', async (req, res) => {
     try {
         text = req.query.text;
         perPage = req.query.perPage;
