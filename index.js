@@ -94,7 +94,7 @@ async function getLyrics() {
     try {
         const response = await axios.get(song.url);
         const $ = cheerio.load(response.data);
-        let lyrics = $('.Lyrics__Container-sc-1ynbvzw-5').text();
+        let lyrics = $('.Lyrics__Container-sc-1ynbvzw-1').text();
         if (lyrics.match(/[-—][А-ЯA-Z]/gm, '\n')) {
             for (let i of lyrics.match(/[-—][А-ЯA-Z]/gm, '\n')) {
                 lyrics = lyrics.replace(i, `${i[0]}\n${i[1]}`);
